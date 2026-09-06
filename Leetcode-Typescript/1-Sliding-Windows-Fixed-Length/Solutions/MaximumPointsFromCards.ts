@@ -1,3 +1,7 @@
+// NOTE: this problem was covered in the practice session, as an add-on to the
+// maximum subarray sum problem. Make sure to understand that one as fully as
+// possible before attempting this one.
+
 export function getMaximumPointsFromCards(points: number[], k: number) {
   if (k < 0) {
     throw new Error("Can't take exactly k cards if k is negative");
@@ -7,38 +11,43 @@ export function getMaximumPointsFromCards(points: number[], k: number) {
     throw new Error("Not enough cards available to take exactly k cards");
   }
 
-  const cardCountMinusK = points.length - k;
+  let totalPointsSum = 0;
 
-  let totalPointsCount = 0;
-
-  let firstNonTakenPointsCount = 0;
-
-  for (let i = 0; i < cardCountMinusK; i++) {
+  for (let i = 0; i < points.length; i++) {
     const currentPointsValue = points[i];
-    firstNonTakenPointsCount += currentPointsValue;
-
-    totalPointsCount += currentPointsValue;
+    totalPointsSum += currentPointsValue;
   }
 
-  let minimumNonTakenPointsCountSoFar = firstNonTakenPointsCount;
-  let rollingNonTakenPointsCount = firstNonTakenPointsCount;
+  // THE PLAN: use a sliding window to work out the best cards NOT to take.
+  // We need to find the window with the MINIMUM points sum, which will in
+  // turn MAXIMISE the points sum of the remaining cards, which we do take.
+  const windowSize = points.length - k;
+
+  let firstWindowPointsSum = 0;
+
+  for (let i = 0; i < windowSize; i++) {
+    const currentPointsValue = points[i];
+    firstWindowPointsSum += currentPointsValue;
+  }
+
+  let minimumWindowPointsSumSoFar = firstWindowPointsSum;
+  let rollingWindowPointsSum = firstWindowPointsSum;
 
   for (
-    let startIndex = 0;
-    startIndex + cardCountMinusK < points.length;
-    startIndex++
+    let windowStartIndex = 0;
+    windowStartIndex + windowSize < points.length;
+    windowStartIndex++
   ) {
-    const oldNumberToDiscard = points[startIndex];
-    const newNumberToAdd = points[startIndex + cardCountMinusK];
-    rollingNonTakenPointsCount += newNumberToAdd - oldNumberToDiscard;
+    const oldPointsValueToDiscard = points[windowStartIndex];
+    const newPointsValueToAdd = points[windowStartIndex + windowSize];
+    rollingWindowPointsSum += newPointsValueToAdd - oldPointsValueToDiscard;
 
-    minimumNonTakenPointsCountSoFar = Math.min(
-      minimumNonTakenPointsCountSoFar,
-      rollingNonTakenPointsCount,
+    minimumWindowPointsSumSoFar = Math.min(
+      minimumWindowPointsSumSoFar,
+      rollingWindowPointsSum,
     );
-
-    totalPointsCount += newNumberToAdd;
   }
 
-  return totalPointsCount - minimumNonTakenPointsCountSoFar;
+  const remainingPointsSum = totalPointsSum - minimumWindowPointsSumSoFar;
+  return remainingPointsSum;
 }

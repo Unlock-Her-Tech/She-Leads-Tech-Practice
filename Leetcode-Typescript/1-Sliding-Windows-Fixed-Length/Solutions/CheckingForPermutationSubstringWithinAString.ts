@@ -1,21 +1,8 @@
-// Helper function. The function with the solution body is below
-function checkIfLetterCountsAreIdentical(
-  letterCounts1: Map<string, number>,
-  letterCounts2: Map<string, number>,
-) {
-  if (letterCounts1.size !== letterCounts2.size) {
-    return false;
-  }
-
-  for (const [letter, letterCounts1Count] of letterCounts1.entries()) {
-    const letterCounts2Count = letterCounts2.get(letter);
-    if (letterCounts1Count !== letterCounts2Count) {
-      return false;
-    }
-  }
-
-  return true;
-}
+// NOTE: this problem is a bonus, and was not covered in either the theory
+// session or the practice session. It can be solved efficiently using the
+// fixed-size sliding window technique (see below). It uses a data structure
+// not formally covered yet (a map), so don't worry if this solution is hard
+// to understand.
 
 export function checkIfHaystackContainsPermutationOfNeedle(
   needle: string,
@@ -26,7 +13,10 @@ export function checkIfHaystackContainsPermutationOfNeedle(
   }
 
   const needleLetterCounts = new Map<string, number>();
-  const rollingHaystackLetterCounts = new Map<string, number>();
+  const firstHaystackWindowLetterCountDifferencesFromNeedle = new Map<
+    string,
+    number
+  >();
 
   for (let i = 0; i < needle.length; i++) {
     const currentNeedleLetter = needle[i];
@@ -34,50 +24,85 @@ export function checkIfHaystackContainsPermutationOfNeedle(
       currentNeedleLetter,
       (needleLetterCounts.get(currentNeedleLetter) ?? 0) + 1,
     );
-
-    const currentHaystackLetter = haystack[i];
-    rollingHaystackLetterCounts.set(
-      currentHaystackLetter,
-      (rollingHaystackLetterCounts.get(currentHaystackLetter) ?? 0) + 1,
+    firstHaystackWindowLetterCountDifferencesFromNeedle.set(
+      currentNeedleLetter,
+      (firstHaystackWindowLetterCountDifferencesFromNeedle.get(
+        currentNeedleLetter,
+      ) ?? 0) - 1,
     );
   }
 
-  if (
-    checkIfLetterCountsAreIdentical(
-      rollingHaystackLetterCounts,
-      needleLetterCounts,
-    )
-  ) {
+  const windowSize = needle.length;
+
+  for (let i = 0; i < windowSize; i++) {
+    const currentHaystackLetter = haystack[i];
+    if (
+      firstHaystackWindowLetterCountDifferencesFromNeedle.get(
+        currentHaystackLetter,
+      ) === -1
+    ) {
+      firstHaystackWindowLetterCountDifferencesFromNeedle.delete(
+        currentHaystackLetter,
+      );
+    } else {
+      firstHaystackWindowLetterCountDifferencesFromNeedle.set(
+        currentHaystackLetter,
+        (firstHaystackWindowLetterCountDifferencesFromNeedle.get(
+          currentHaystackLetter,
+        ) ?? 0) + 1,
+      );
+    }
+  }
+
+  if (firstHaystackWindowLetterCountDifferencesFromNeedle.size === 0) {
     return true;
   }
 
+  const rollingHaystackWindowLetterCountDifferencesFromNeedle =
+    firstHaystackWindowLetterCountDifferencesFromNeedle;
+
   for (
-    let startIndex = 0;
-    startIndex + needle.length < haystack.length;
-    startIndex++
+    let windowStartIndex = 0;
+    windowStartIndex + windowSize < haystack.length;
+    windowStartIndex++
   ) {
-    const oldHaystackLetterToDiscard = haystack[startIndex];
-    if (rollingHaystackLetterCounts.get(oldHaystackLetterToDiscard)! === 1) {
-      rollingHaystackLetterCounts.delete(oldHaystackLetterToDiscard);
-    } else {
-      rollingHaystackLetterCounts.set(
+    const oldHaystackLetterToDiscard = haystack[windowStartIndex];
+    if (
+      rollingHaystackWindowLetterCountDifferencesFromNeedle.get(
         oldHaystackLetterToDiscard,
-        rollingHaystackLetterCounts.get(oldHaystackLetterToDiscard)! - 1,
+      ) === 1
+    ) {
+      rollingHaystackWindowLetterCountDifferencesFromNeedle.delete(
+        oldHaystackLetterToDiscard,
+      );
+    } else {
+      rollingHaystackWindowLetterCountDifferencesFromNeedle.set(
+        oldHaystackLetterToDiscard,
+        (rollingHaystackWindowLetterCountDifferencesFromNeedle.get(
+          oldHaystackLetterToDiscard,
+        ) ?? 0) - 1,
       );
     }
 
-    const newHaystackLetterToAdd = haystack[startIndex + needle.length];
-    rollingHaystackLetterCounts.set(
-      newHaystackLetterToAdd,
-      (rollingHaystackLetterCounts.get(newHaystackLetterToAdd) ?? 0) + 1,
-    );
-
+    const newHaystackLetterToAdd = haystack[windowStartIndex + windowSize];
     if (
-      checkIfLetterCountsAreIdentical(
-        rollingHaystackLetterCounts,
-        needleLetterCounts,
-      )
+      rollingHaystackWindowLetterCountDifferencesFromNeedle.get(
+        newHaystackLetterToAdd,
+      ) === -1
     ) {
+      rollingHaystackWindowLetterCountDifferencesFromNeedle.delete(
+        newHaystackLetterToAdd,
+      );
+    } else {
+      rollingHaystackWindowLetterCountDifferencesFromNeedle.set(
+        newHaystackLetterToAdd,
+        (rollingHaystackWindowLetterCountDifferencesFromNeedle.get(
+          newHaystackLetterToAdd,
+        ) ?? 0) + 1,
+      );
+    }
+
+    if (rollingHaystackWindowLetterCountDifferencesFromNeedle.size === 0) {
       return true;
     }
   }

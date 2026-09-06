@@ -1,3 +1,9 @@
+// NOTE: this problem is a bonus, and was not covered in either the theory
+// session or the practice session. It can be solved efficiently using the
+// fixed-size sliding window technique (see below). It uses a data structure
+// not formally covered yet (a set), so don't worry if this solution is hard
+// to understand.
+
 // Helper function. The function with the solution body is below
 function serialiseCoordinatePair(xCoordinate: number, yCoordinate: number) {
   return `(${xCoordinate}, ${yCoordinate})`;
@@ -33,10 +39,14 @@ export function countDistinctPointsReachableAfterDirectionSubstringRemoval(
 
   let serialisedFinalPointsSeenSoFar = new Set<string>();
 
+  // This variable isn't strictly necessary, it's only introduced for clarity.
+  // It's particularly useful as a point of comparison with other problems.
+  const windowSize = k;
+
   let currentXCoordinate = 0;
   let currentYCoordinate = 0;
 
-  for (let i = k; i < s.length; i++) {
+  for (let i = windowSize; i < s.length; i++) {
     const currentMove = s[i];
     const { xDifference, yDifference } =
       getCoordinateDifferenceForMove(currentMove);
@@ -48,14 +58,18 @@ export function countDistinctPointsReachableAfterDirectionSubstringRemoval(
     serialiseCoordinatePair(currentXCoordinate, currentYCoordinate),
   );
 
-  for (let startIndex = 0; startIndex + k < s.length; startIndex++) {
-    const oldMoveToDiscard = s[startIndex + k];
+  for (
+    let windowStartIndex = 0;
+    windowStartIndex + windowSize < s.length;
+    windowStartIndex++
+  ) {
+    const oldMoveToDiscard = s[windowStartIndex + windowSize];
     const { xDifference: oldMoveXDifference, yDifference: oldMoveYDifference } =
       getCoordinateDifferenceForMove(oldMoveToDiscard);
     currentXCoordinate -= oldMoveXDifference;
     currentYCoordinate -= oldMoveYDifference;
 
-    const newMoveToAdd = s[startIndex];
+    const newMoveToAdd = s[windowStartIndex];
     const { xDifference: newMoveXDifference, yDifference: newMoveYDifference } =
       getCoordinateDifferenceForMove(newMoveToAdd);
     currentXCoordinate += newMoveXDifference;

@@ -1,3 +1,9 @@
+// NOTE: this problem is a bonus, and was not covered in either the theory
+// session or the practice session. It can be solved efficiently using the
+// fixed-size sliding window technique (see below), but more natural solutions
+// exist using other techniques which we'll study in future. In the meantime,
+// don't worry if this solution is hard to understand.
+
 export function countSubstringsOfLengthKWithDistinctCharacters(
   s: string,
   k: number,
@@ -15,7 +21,11 @@ export function countSubstringsOfLengthKWithDistinctCharacters(
 
   let distinctSubstringCount = 0;
 
-  for (let i = 0; i < k; i++) {
+  // This variable isn't strictly necessary, it's only introduced for clarity.
+  // It's particularly useful as a point of comparison with other problems.
+  const windowSize = k;
+
+  for (let i = 0; i < windowSize; i++) {
     const currentCharacter = s[i];
 
     if (!charactersPresentAtLeastOnce.has(currentCharacter)) {
@@ -34,9 +44,13 @@ export function countSubstringsOfLengthKWithDistinctCharacters(
     distinctSubstringCount++;
   }
 
-  for (let startIndex = 0; startIndex + k < s.length; startIndex++) {
-    const oldCharacterToDiscard = s[startIndex];
-    const newCharacterToAdd = s[startIndex + k];
+  for (
+    let windowStartIndex = 0;
+    windowStartIndex + windowSize < s.length;
+    windowStartIndex++
+  ) {
+    const oldCharacterToDiscard = s[windowStartIndex];
+    const newCharacterToAdd = s[windowStartIndex + windowSize];
 
     if (
       charactersPresentAtLeastTwiceWithCounts.get(oldCharacterToDiscard) === 2
