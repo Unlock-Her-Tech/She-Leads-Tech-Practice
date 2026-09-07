@@ -26,21 +26,18 @@ Practice resources are organised first by language and then by problem-solving p
 
 ```text
 Leetcode-Typescript/
-├── README.md
-├── SESSION_TEMPLATE.md
 └── Session-XX-Topic-Name/
     ├── README.md
     ├── Problems.md
     └── Solutions/
 ```
 
-Each language folder contains its own creation guide. Each session README explains the topic, prerequisites and the recommended way to work through its problem set.
+Each session README explains the topic, prerequisites and the recommended way to work through its problem set.
 
 ### TypeScript
 
 | Topic | Topic guide |
 | --- | --- |
-| TypeScript session structure | [Read the contributor guide](Leetcode-Typescript/) |
 | Session 01: Fixed-length sliding windows | [Open the practice guide](Leetcode-Typescript/Session-01-Fixed-Length-Sliding-Windows/) |
 
 ## How to practise
@@ -57,13 +54,11 @@ Each language folder contains its own creation guide. Each session README explai
 
 Contributions are welcome when they add a new approach or make an existing solution easier to understand.
 
-1. Read the guide inside the relevant language folder.
-2. For a new session, copy its `SESSION_TEMPLATE.md` and follow the naming rules.
-3. Create a branch such as `practice-session-02-your-name`.
-4. Put each solution in the matching session's `Solutions/` folder.
-5. Use a descriptive filename and include complexity notes where helpful.
-6. Test the solution against normal and edge cases.
-7. Open a pull request explaining your approach.
+1. Create a branch such as `practice-session-02-your-name`.
+2. Put each solution in the matching session's `Solutions/` folder.
+3. Use a descriptive filename and include complexity notes where helpful.
+4. Test the solution against normal and edge cases.
+5. Open a pull request explaining your approach.
 
 Please do not replace another contributor's valid approach merely because yours is different—multiple clear approaches can be useful for learning.
 

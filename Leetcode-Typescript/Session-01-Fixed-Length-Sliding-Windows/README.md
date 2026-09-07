@@ -7,7 +7,7 @@
 
 ## Where this topic fits
 
-[Practice home](../../README.md) → [TypeScript practice](../README.md) → **Session 01: Fixed-length sliding windows** → [Problem set](Problems.md) → [Solutions](Solutions/)
+[Practice home](../../README.md) → **Session 01: Fixed-length sliding windows** → [Problem set](Problems.md) → [Solutions](Solutions/)
 
 Use this guide for the fixed-length sliding-window practice set. For general information about all She Leads Tech practice resources, return to the [Practice README](../../README.md).
 
@@ -56,7 +56,7 @@ If this pattern is new to you, study the [fixed-length sliding-window session in
 
 Work from top to bottom: the early problems establish the pattern, while the later ones combine it with additional state.
 
-## A useful thinking template
+## Problem-solving checklist
 
 Before coding, answer these questions:
 
@@ -86,4 +86,4 @@ Continue to [She Leads Tech Review](https://github.com/Unlock-Her-Tech/She-Leads
 
 ---
 
-Part of [She Leads Tech Practice](../../README.md) · [TypeScript sessions](../README.md) · Attempt first, compare second, revisit later.
+Part of [She Leads Tech Practice](../../README.md) · Attempt first, compare second, revisit later.
