@@ -1,13 +1,13 @@
-# 🧩 She Leads Tech — Practice
+# 🩷 She Leads Tech — Practice
 
 > **PRACTISE:** Build confidence by solving focused problems independently.
 
-[![Part of She Leads Tech](https://img.shields.io/badge/She%20Leads%20Tech-PRACTISE-16A34A)](https://github.com/Unlock-Her-Tech)
+[![Part of She Leads Tech](https://img.shields.io/badge/She%20Leads%20Tech-PRACTISE-FF1493)](https://github.com/Unlock-Her-Tech)
 [![Language](https://img.shields.io/badge/language-TypeScript-3178C6?logo=typescript&logoColor=white)](Leetcode-Typescript/)
 
 ## Where this repository fits
 
-[📘 Theory](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Theory) → **🧩 Practice** → [✅ Review](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Review)
+[📙 Theory](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Theory) → **🩷 Practice** → [🔁 Review](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Review)
 
 Use this repository after learning a concept in **Theory**. Choose a problem, attempt it without opening the solution, and compare approaches only after you have tested your own work.
 

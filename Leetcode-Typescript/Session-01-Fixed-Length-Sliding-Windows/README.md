@@ -1,9 +1,9 @@
-# 🧩 Practice Session 01 — Fixed-Length Sliding Windows
+# 🩷 Practice Session 01 — Fixed-Length Sliding Windows
 
 > **TOPIC GUIDE:** Practise recognising and applying a sliding window whose size remains fixed.
 
-[![Part of She Leads Tech](https://img.shields.io/badge/She%20Leads%20Tech-PRACTISE-16A34A)](https://github.com/Unlock-Her-Tech)
-[![Topic](https://img.shields.io/badge/pattern-fixed--length%20sliding%20window-15803D)](Problems.md)
+[![Part of She Leads Tech](https://img.shields.io/badge/She%20Leads%20Tech-PRACTISE-FF1493)](https://github.com/Unlock-Her-Tech)
+[![Topic](https://img.shields.io/badge/pattern-fixed--length%20sliding%20window-DB2777)](Problems.md)
 
 ## Where this topic fits
 
