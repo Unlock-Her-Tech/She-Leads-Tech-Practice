@@ -7,7 +7,7 @@
 
 ## Where this repository fits
 
-[📙 Theory](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Theory) → **🩷 Practice** → [🔁 Review](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Review)
+[🧡 Theory](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Theory) → **🩷 Practice** → [💚 Review](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Review)
 
 Use this repository after learning a concept in **Theory**. Choose a problem, attempt it without opening the solution, and compare approaches only after you have tested your own work.
 
@@ -34,11 +34,9 @@ Leetcode-Typescript/
 
 Each session README explains the topic, prerequisites and the recommended way to work through its problem set.
 
-### TypeScript
+Open the [TypeScript practice folder](Leetcode-Typescript/) and choose a numbered session. Each session has its own README explaining the topic, prerequisites and recommended problem order.
 
-| Topic | Topic guide |
-| --- | --- |
-| Session 01: Fixed-length sliding windows | [Open the practice guide](Leetcode-Typescript/Session-01-Fixed-Length-Sliding-Windows/) |
+The folder structure is the practice index, so this main README does not need a manually maintained list of sessions or problems.
 
 ## How to practise
 
