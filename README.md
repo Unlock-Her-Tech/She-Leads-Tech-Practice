@@ -50,15 +50,69 @@ Each session README explains the topic, prerequisites and the recommended way to
 6. Open the topic's `Solutions/` folder only after completing a serious attempt.
 7. Compare the approaches, then revisit the problem without notes later.
 
+## Get the repository
+
+You can either **clone** the repository for personal practice or **fork** it if you want to contribute your work.
+
+### Clone for personal practice
+
+Cloning gives you a local copy of the repository. Choose this option if you want to work through the exercises without submitting changes.
+
+```bash
+git clone https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice.git
+cd She-Leads-Tech-Practice
+```
+
+To download future updates:
+
+```bash
+git pull origin main
+```
+
+### Fork to contribute
+
+Forking creates your own GitHub copy, where you can make changes before opening a pull request.
+
+1. Select **Fork** at the top of the [Practice repository](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice).
+2. Choose your GitHub account as the destination.
+3. Clone your fork, replacing `YOUR-USERNAME` with your GitHub username:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/She-Leads-Tech-Practice.git
+cd She-Leads-Tech-Practice
+```
+
+4. Connect your fork to the original repository so you can receive updates:
+
+```bash
+git remote add upstream https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice.git
+git fetch upstream
+```
+
+5. Before starting new work, update your local `main` branch:
+
+```bash
+git checkout main
+git pull upstream main
+```
+
 ## Contributing a solution
 
 Contributions are welcome when they add a new approach or make an existing solution easier to understand.
 
-1. Create a branch such as `practice-session-02-your-name`.
+1. Create a branch from the latest `main`, such as `practice-session-02-your-name`.
 2. Put each solution in the matching session's `Solutions/` folder.
 3. Use a descriptive filename and include complexity notes where helpful.
 4. Test the solution against normal and edge cases.
-5. Open a pull request explaining your approach.
+5. Commit and push your branch:
+
+```bash
+git add .
+git commit -m "Add Session 02 solution"
+git push origin practice-session-02-your-name
+```
+
+6. Open a pull request from your fork to the original repository's `main` branch and explain your approach.
 
 Please do not replace another contributor's valid approach merely because yours is different—multiple clear approaches can be useful for learning.
 
