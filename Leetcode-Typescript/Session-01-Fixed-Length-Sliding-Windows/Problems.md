@@ -77,7 +77,7 @@ Given a string `s` consisting of characters `'U'`, `'D'`, `'L'` and `'R'`, repre
 | `'L'`     | Move from (x, y) to (x - 1, y) |
 | `'R'`     | Move from (x, y) to (x + 1, y) |
 
-And given also a integer `k`, return the number of distinct final coordinates reachable when any substring of length `k` is removed from `s` and the remaining moves are followed in order, starting from coordinate `(0, 0)`.
+And given also an integer `k`, return the number of distinct final coordinates reachable when any substring of length `k` is removed from `s` and the remaining moves are followed in order, starting from coordinate `(0, 0)`.
 
 ### Maximum all-distinct subarray sum (Leetcode #2461, medium)
 
