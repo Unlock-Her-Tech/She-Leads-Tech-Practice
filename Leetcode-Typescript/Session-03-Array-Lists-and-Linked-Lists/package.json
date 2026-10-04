@@ -1,0 +1,7 @@
+{
+  "name": "3-Array-Lists-and-Linked-Lists",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.5.1"
+  }
+}
