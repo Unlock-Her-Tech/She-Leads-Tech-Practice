@@ -1,10 +1,10 @@
-import { ArrayList } from "../ListDataStructures/ArrayList";
+import { ArrayList } from "../ListDataStructures/ArrayList.ts";
 import {
   SinglyLinkedList,
-} from "../ListDataStructures/SinglyLinkedList";
+} from "../ListDataStructures/SinglyLinkedList.ts";
 import {
   DoublyLinkedList,
-} from "../ListDataStructures/DoublyLinkedList";
+} from "../ListDataStructures/DoublyLinkedList.ts";
 
 export function ArrayList_Reverse<T>(list: ArrayList<T>): void {
   // You should implement this

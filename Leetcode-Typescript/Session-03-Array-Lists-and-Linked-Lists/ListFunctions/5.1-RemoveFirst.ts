@@ -1,6 +1,6 @@
-import { ArrayList } from "../ListDataStructures/ArrayList";
-import { SinglyLinkedList } from "../ListDataStructures/SinglyLinkedList";
-import { DoublyLinkedList } from "../ListDataStructures/DoublyLinkedList";
+import { ArrayList } from "../ListDataStructures/ArrayList.ts";
+import { SinglyLinkedList } from "../ListDataStructures/SinglyLinkedList.ts";
+import { DoublyLinkedList } from "../ListDataStructures/DoublyLinkedList.ts";
 
 export function ArrayList_RemoveFirst<T>(list: ArrayList<T>): void {
   // You should implement this

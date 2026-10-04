@@ -4,22 +4,22 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { ArrayList } from "../ListDataStructures/ArrayList";
+import { ArrayList } from "../ListDataStructures/ArrayList.ts";
 import {
   SinglyLinkedList,
   SinglyLinkedListNode,
-} from "../ListDataStructures/SinglyLinkedList";
+} from "../ListDataStructures/SinglyLinkedList.ts";
 import {
   DoublyLinkedList,
   DoublyLinkedListNode,
-} from "../ListDataStructures/DoublyLinkedList";
+} from "../ListDataStructures/DoublyLinkedList.ts";
 import {
   ArrayList_GetFirstValue,
   SinglyLinkedList_GetFirstNode,
   SinglyLinkedList_GetFirstValue,
   DoublyLinkedList_GetFirstNode,
   DoublyLinkedList_GetFirstValue,
-} from "./1.1-GetFirst";
+} from "./1.1-GetFirst.ts";
 
 function makeArrayList<T>(values: T[]): ArrayList<T> {
   const list = new ArrayList<T>(4);

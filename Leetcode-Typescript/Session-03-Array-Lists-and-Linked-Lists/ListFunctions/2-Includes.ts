@@ -1,12 +1,12 @@
-import { ArrayList } from "../ListDataStructures/ArrayList";
+import { ArrayList } from "../ListDataStructures/ArrayList.ts";
 import {
   SinglyLinkedList,
   SinglyLinkedListNode,
-} from "../ListDataStructures/SinglyLinkedList";
+} from "../ListDataStructures/SinglyLinkedList.ts";
 import {
   DoublyLinkedList,
   DoublyLinkedListNode,
-} from "../ListDataStructures/DoublyLinkedList";
+} from "../ListDataStructures/DoublyLinkedList.ts";
 
 export function ArrayList_IncludesValue<T>(
   list: ArrayList<T>,

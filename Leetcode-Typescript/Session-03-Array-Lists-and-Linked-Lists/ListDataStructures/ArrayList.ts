@@ -42,6 +42,7 @@ export class ArrayList<T> {
   _internalArray: T[];
   _capacity: number;
   _length: number;
+  [index: number]: T;
 
   constructor(capacity: number) {
     this._internalArray = createRestrictedArray<T>({ capacity });
