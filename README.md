@@ -48,51 +48,15 @@ The folder structure is the practice index, so this main README does not need a 
 6. Open the topic's `Solutions/` folder only after completing a serious attempt.
 7. Compare the approaches, then revisit the problem without notes later.
 
-## Get the repository
+## Fork the repository
 
-You can either **clone** the repository for personal practice or **fork** it if you want to contribute your work.
-
-### Clone for personal practice
-
-Cloning gives you a local copy of the repository. Choose this option if you want to work through the exercises without submitting changes.
-
-```bash
-git clone https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice.git
-cd She-Leads-Tech-Practice
-```
-
-To download future updates:
-
-```bash
-git pull origin main
-```
-
-### Fork to contribute
-
-Forking creates your own GitHub copy, where you can make changes before opening a pull request.
+Please [fork this repository](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice/fork) before working through the practice exercises so you have your own copy on GitHub.
 
 1. Select **Fork** at the top of the [Practice repository](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice).
-2. Choose your GitHub account as the destination.
-3. Clone your fork, replacing `YOUR-USERNAME` with your GitHub username:
+2. Choose your GitHub account and select **Create fork**.
+3. Work in your fork to save your notes, solutions and changes.
 
-```bash
-git clone https://github.com/YOUR-USERNAME/She-Leads-Tech-Practice.git
-cd She-Leads-Tech-Practice
-```
-
-4. Connect your fork to the original repository so you can receive updates:
-
-```bash
-git remote add upstream https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice.git
-git fetch upstream
-```
-
-5. Before starting new work, update your local `main` branch:
-
-```bash
-git checkout main
-git pull upstream main
-```
+You can use **Sync fork** on GitHub to keep your copy up to date. To propose improvements, open a pull request from your fork to the original repository.
 
 ## Contributing a solution
 
