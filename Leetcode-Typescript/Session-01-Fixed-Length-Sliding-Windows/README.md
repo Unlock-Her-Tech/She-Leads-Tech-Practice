@@ -5,6 +5,10 @@
 [![Part of She Leads Tech](https://img.shields.io/badge/She%20Leads%20Tech-PRACTISE-FF1493)](https://github.com/Unlock-Her-Tech)
 [![Topic](https://img.shields.io/badge/pattern-fixed--length%20sliding%20window-DB2777)](Problems.md)
 
+## Before you start
+
+Please [fork the Practice repository](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice/fork) before starting this session so you can save your work in your own GitHub copy. See the [main README](../../README.md#fork-the-repository) for the steps.
+
 ## Where this topic fits
 
 [Practice home](../../README.md) → **Session 01: Fixed-length sliding windows** → [Problem set](Problems.md) → [Solutions](Solutions/)
