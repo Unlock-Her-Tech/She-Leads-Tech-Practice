@@ -1,6 +1,6 @@
 # Recursion
 
-Nine recursion practice questions: all five coding exercises from Udemy Section 8, plus LeetCode Power of Two (#231) and Power of Three (#326), followed by two medium backtracking problems.
+Nine recursion practice questions covering powers, factorials, array products, range sums, Fibonacci numbers, and backtracking.
 
 Start with [Problems.md](./Problems.md), continue with [MediumProblems.md](./MediumProblems.md), then implement the matching TypeScript starter functions. Each starter deliberately throws until completed.
 
