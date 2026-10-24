@@ -2,7 +2,7 @@
 
 Use recursion for each exercise. Identify the base case, recursive step, time complexity, and call-stack space complexity. These are practice questions; implementations are intentionally left to learners.
 
-## Udemy Section 8: Recursion Problem Set
+## Recursion Problem Set
 
 The following five questions are paraphrased from [JavaScript Algorithms and Data Structures Masterclass](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/). Examples and explicit practice assumptions are provided here. START HERE and SOLUTIONS are supporting lectures, not additional questions.
 
