@@ -81,3 +81,7 @@ Signature: `isPowerOfThree(n: number): boolean`
 Examples: `isPowerOfThree(27) → true`, `isPowerOfThree(1) → true`, `isPowerOfThree(0) → false`, `isPowerOfThree(-1) → false`.
 
 Solve recursively first, handling zero and negative inputs. Then try the original follow-up without loops or recursion.
+
+## Medium recursion and backtracking
+
+Continue with [two Amazon interview practice problems](./MediumProblems.md): Combination Sum (#39) and Permutations (#46).

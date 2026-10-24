@@ -7,7 +7,7 @@ Build confidence by solving problems independently, then compare your approach w
 ## Get started
 
 1. [Fork this repository](https://github.com/Unlock-Her-Tech/She-Leads-Tech-Practice/fork) to save your own solutions.
-2. Open the [TypeScript practice sessions](Leetcode-Typescript/) and choose a topic.
+2. Open the [Data structure series](Data%20structure%20series/) and choose a topic.
 3. Attempt the problems, test edge cases and note the time and space complexity before checking the solutions.
 
 ## Fork the repository
