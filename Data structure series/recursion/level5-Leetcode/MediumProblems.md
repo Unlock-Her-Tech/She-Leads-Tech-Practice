@@ -1,9 +1,5 @@
 # Medium Recursion and Backtracking
 
-These extend the exercises in levels 1–4. Solve both with recursive backtracking; explain the base case, choices, undo step, and time and space costs.
-
-Both appear in a [community compilation of Amazon SDE1 interview questions](https://leetcode.com/discuss/post/488887/rqq1489223579764.html). This is community-reported interview history, not an official Amazon question bank or a guarantee of current questions. Problem details are paraphrased from the linked LeetCode statements.
-
 ## 1. Combination Sum — LeetCode #39 (Medium)
 
 [LeetCode](https://leetcode.com/problems/combination-sum/) · [TypeScript starter](./1-combinationSum.ts)
