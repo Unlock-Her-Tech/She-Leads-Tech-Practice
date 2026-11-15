@@ -4,6 +4,8 @@ Start with Stack Level 1, then do Queue Level 1. In each folder, solve the files
 
 Each starter includes a short prompt, a hint and an example to run locally. The LeetCode links have the full constraints and more examples. For every exercise, trace one example by hand and check an edge case before submitting.
 
+After you try an exercise, open the file with the same name in that level's `Solutions` folder. Each reference answer explains the approach and includes a console example you can uncomment and run.
+
 See [how to run TypeScript locally](../../README.md#run-typescript-locally) for setup and console output.
 
 ## Level 1 · Easy fundamentals
